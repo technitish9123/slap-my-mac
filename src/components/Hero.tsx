@@ -248,6 +248,33 @@ export default function Hero() {
           <p className="text-xs opacity-70 text-center" style={{ color: "var(--t-text-muted)" }}>
             macOS 14.6+ (Sonoma) &middot; Apple Silicon required &middot; v1.0.0
           </p>
+
+          {/* Install tip */}
+          <div
+            className="mt-4 max-w-md mx-auto rounded-lg px-4 py-3"
+            style={{
+              backgroundColor: "var(--t-accent-soft)",
+              border: "1px solid var(--t-accent-glow)",
+            }}
+          >
+            <p className="text-xs leading-relaxed mb-2" style={{ color: "var(--t-text-muted)" }}>
+              <span className="font-semibold" style={{ color: "var(--t-accent)" }}>⚠️ &quot;Damaged&quot; error?</span>{" "}
+              macOS quarantines unsigned apps. Open Terminal and run:
+            </p>
+            <code
+              className="block text-xs rounded-md px-3 py-2 font-mono select-all"
+              style={{
+                backgroundColor: "var(--t-glass)",
+                color: "var(--t-accent)",
+                border: "1px solid var(--t-border)",
+              }}
+            >
+              xattr -cr /Applications/SlapMyMac.app
+            </code>
+            <p className="text-xs mt-2 opacity-70" style={{ color: "var(--t-text-muted)" }}>
+              Then open the app normally. This only needs to be done once.
+            </p>
+          </div>
         </div>
 
         {/* Slap counter */}
